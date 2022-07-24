@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/33dbfd6165.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="index.css" />
+
+    <title>FormValidation</title>
+  </head>
+
+  <body>
+    <div class="main-div">
+
+      <h1 style="text-align: center">Student Registration</h1>
+      <h5 style="text-align: center">Faculty of Science</h5>
+
+      <form id="form" method="post">
+        <h4>Personal information</h4>
+        <hr />
+
+        <div class="form-control">
+          <label class="labels">Name with Initials</label>
+          <input type="text" id="name" class="inputs" />
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <small id="small1">Error messege</small>
+        </div>
+
+        <div class="form-control ">
+          <label class="labels">Gender</label>
+          <select class="inputs" id="gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+          <small>Error messege</small>
+        </div>
+
+        <div class="form-control">
+          <label class="labels">Date of birth</label>
+          <input type="date" class="inputs" id="birthday" name="birthday" />
+          <small>Error messege</small>
+        </div>
+
+        <div class="form-control">
+          <label class="labels">NIC</label>
+          <input type="text" class="inputs" id="nic" name="nic" />
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <small>Error messege</small>
+        </div>
+
+        <div class="form-control">
+          <label class="labels">Address</label>
+          <textarea 
+            rows="2"
+            class="inputs"
+            cols="10"
+            id="address"
+            name="address"
+          >
+          </textarea>
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <small>Error messege</small>
+        </div>
+
+        <div class="form-control">
+          <label class="labels">Telephone No:</label>
+          <input type="number" class="inputs" id="telephone" name="telephone" />
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <small>Error messege</small>
+        </div>
+
+        <div class="form-control">
+          <label class="labels">Z Score</label>
+          <input type="number" class="inputs" id="zscore" name="zscore" />
+          <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+          <small>Error messege</small>
+        </div>
+        <br />
+
+        <h4>Course information</h4>
+        <hr />
+
+        <div class="form-control">
+          <label class="labels">Select Course</label>
+          <select class="inputs" id="course" name="course">
+            <option value="Biological Science">Biological science</option>
+            <option value="Physical science">Physical science</option>
+            <option value="SOR">SOR</option>
+            <option value="CM">CM</option>
+          </select>
+        </div>
+
+        <div class="form-control" class="checkboxBio">
+          <label class="labels">Subject</label>
+          <input type="checkbox" id="bioSub1" name="bioSub1" value="BL305" />
+          <label for="bioSub1">BL305</label>
+          <input type="checkbox" id="bioSub2" name="bioSub2" value="BL306" />
+          <label for="bioSub2">BL306</label>
+          <input type="checkbox" id="bioSub3" name="bioSub3" value="BL307" />
+          <label for="bioSub3">BL307</label>
+          <input type="checkbox" id="bioSub4" name="bioSub4" value="BL308" />
+          <label for="bioSub4">BL308</label>
+          <input type="checkbox" id="bioSub5" name="bioSub5" value="BL309" />
+          <label for="bioSub1">BL309</label>
+          <input type="checkbox" id="bioSub6" name="bioSub6" value="BL310" />
+          <label for="bioSub6">BL310</label>
+        </div>
+
+        <div class="form-control" class="checkboxPhysical">
+          <label class="labels">Subject</label>
+          <input type="checkbox" id="phySub1" name="phySub1" value="PH305" />
+          <label for="phySub1">PH305</label>
+          <input type="checkbox" id="phySub2" name="phySub2" value="PH306" />
+          <label for="phySub2">PH306</label>
+          <input type="checkbox" id="phySub3" name="phySub3" value="PH307" />
+          <label for="phySub3">PH307</label>
+          <input type="checkbox" id="phySub4" name="phySub4" value="PH308" />
+          <label for="phySub4">PH308</label>
+          <input type="checkbox" id="phySub5" name="phySub5" value="PH309" />
+          <label for="phySub1">PH309</label>
+          <input type="checkbox" id="phySub6" name="phySub6" value="PH310" />
+          <label for="phySub6">PH310</label>
+        </div>
+
+        <div class="form-control" class="checkboxSor">
+          <label class="labels">Subject</label>
+          <input type="checkbox" id="sorSub1" name="sorSub1" value="ST305" />
+          <label for="sorSub1">ST305</label>
+          <input type="checkbox" id="sorSub2" name="sorSub2" value="ST306" />
+          <label for="sorSub2">ST306</label>
+          <input type="checkbox" id="sorSub3" name="sorSub3" value="ST307" />
+          <label for="sorSub3">ST307</label>
+          <input type="checkbox" id="sorSub4" name="sorSub4" value="ST308" />
+          <label for="sorSub4">ST308</label>
+          <input type="checkbox" id="sorSub5" name="sorSub5" value="ST309" />
+          <label for="sorSub1">ST309</label>
+          <input type="checkbox" id="sorSub6" name="sorSub6" value="ST310" />
+          <label for="sorSub6">ST310</label>
+        </div>
+
+        <div class="form-control" class="checkboxCm">
+          <label class="labels">Subject</label>
+          <input type="checkbox" id="cmSub1" name="cmSub1" value="MT305" />
+          <label for="cmSub1">MT305</label>
+          <input type="checkbox" id="cmSub2" name="cmSub2" value="MT306" />
+          <label for="cmSub2">MT306</label>
+          <input type="checkbox" id="cmSub3" name="cmSub3" value="MT307" />
+          <label for="cmSub3">MT307</label>
+          <input type="checkbox" id="cmSub4" name="cmSub4" value="MT308" />
+          <label for="cmSub4">MT308</label>
+          <input type="checkbox" id="cmSub5" name="cmSub5" value="MT309" />
+          <label for="cmSub1">MT309</label>
+          <input type="checkbox" id="cmSub6" name="cmSub6" value="MT310" />
+          <label for="cmSub6">MT310</label>
+        </div>
+
+        <br><br>
+
+        <input type="submit" value="enter">
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
