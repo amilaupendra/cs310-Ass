@@ -56,7 +56,7 @@
         </div>
 
         <div class="form-control">
-          <label class="labels">Address</label>
+          <label class="labels"">Address</label>
           <textarea 
             rows="2"
             class="inputs"
@@ -87,18 +87,18 @@
         <h4>Course information</h4>
         <hr />
 
-        <div class="form-control">
+        <div class="form-control CourseDiv">
           <label class="labels">Select Course</label>
-          <select class="inputs" id="course" name="course">
-            <option value="Biological Science">Biological science</option>
+          <select class="inputs" id="course" name="course" onchange="courseRegistration(this)" >
+            <option value="Biological Science">Biological Science</option>
             <option value="Physical science">Physical science</option>
             <option value="SOR">SOR</option>
             <option value="CM">CM</option>
           </select>
         </div>
 
-        <div class="form-control" class="checkboxBio">
-          <label class="labels">Subject</label>
+        <div class="subjectsDiv" class="checkboxBio" id="checkboxBio">
+          <label class="labels" id="subjectId">Subject</label>
           <input type="checkbox" id="bioSub1" name="bioSub1" value="BL305" />
           <label for="bioSub1">BL305</label>
           <input type="checkbox" id="bioSub2" name="bioSub2" value="BL306" />
@@ -113,8 +113,8 @@
           <label for="bioSub6">BL310</label>
         </div>
 
-        <div class="form-control" class="checkboxPhysical">
-          <label class="labels">Subject</label>
+        <div class="subjectsDiv" class="checkboxPhysical" id="checkboxPhysical">
+          <label class="labels" id="subjectId">Subject</label>
           <input type="checkbox" id="phySub1" name="phySub1" value="PH305" />
           <label for="phySub1">PH305</label>
           <input type="checkbox" id="phySub2" name="phySub2" value="PH306" />
@@ -129,8 +129,8 @@
           <label for="phySub6">PH310</label>
         </div>
 
-        <div class="form-control" class="checkboxSor">
-          <label class="labels">Subject</label>
+        <div class="subjectsDiv" class="checkboxSor" id="checkboxSor">
+          <label class="labels" id="subjectId">Subject</label>
           <input type="checkbox" id="sorSub1" name="sorSub1" value="ST305" />
           <label for="sorSub1">ST305</label>
           <input type="checkbox" id="sorSub2" name="sorSub2" value="ST306" />
@@ -145,8 +145,8 @@
           <label for="sorSub6">ST310</label>
         </div>
 
-        <div class="form-control" class="checkboxCm">
-          <label class="labels">Subject</label>
+        <div class="subjectsDiv" class="checkboxCm" id="checkboxCm">
+          <label class="labels" id="subjectId">Subject</label>
           <input type="checkbox" id="cmSub1" name="cmSub1" value="MT305" />
           <label for="cmSub1">MT305</label>
           <input type="checkbox" id="cmSub2" name="cmSub2" value="MT306" />

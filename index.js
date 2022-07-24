@@ -8,6 +8,13 @@ const telephone = document.getElementById("telephone");
 const zscore = document.getElementById("zscore");
 const small1 = document.getElementById("small1");
 
+const course = document.getElementById("course");
+const checkboxBio = document.getElementById("checkboxBio");
+  const checkboxBio2 = checkboxBio;
+const checkboxPhysical = document.getElementById("checkboxPhysical");
+const checkboxSor = document.getElementById("checkboxSor");
+const checkboxCm = document.getElementById("checkboxCm");
+
 form.addEventListener("submit", (e) => {
   e.preventDefault(e);
 
@@ -32,12 +39,15 @@ function validateForm() {
 
   setError(zscore);
   checkNumbersOnly(zscore);
+
+
 }
 
 //function to check wheather the input field empty or not
 function setError(input) {
   if (input.value == "") {
     input.style.borderColor = "red";
+    input.style.backgroundColor = "red";
   } else {
     input.style.borderColor = "green";
   }
@@ -78,5 +88,37 @@ function checkTenNumbers(input) {
     small.style.visibility = 'visible';
   } else {
     input.style.borderColor = "green";
+  }
+}
+
+
+//course and subects
+
+function courseRegistration(input){
+
+  
+
+  switch(input.value){
+
+    case "Biological Science" : 
+    checkboxBio.style.visibility='visible';
+    break;
+
+    case "Physical science" :
+    checkboxBio.innerHTML = checkboxPhysical.innerHTML;
+    checkboxBio.style.visibility='visible';
+    break;
+
+    case "SOR" : 
+    checkboxBio.innerHTML = checkboxSor.innerHTML;
+    checkboxBio.style.visibility='visible';
+    break;
+
+    case "CM" : 
+    checkboxBio.innerHTML = checkboxCm.innerHTML;
+    checkboxBio.style.visibility='visible';
+    break;
+
+    default: break;
   }
 }

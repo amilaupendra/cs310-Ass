@@ -58,3 +58,39 @@ input[type=submit]{
 input[type=submit]:hover{
     background-color: gray;
 }
+
+
+/*subject infro*/
+
+#subjectId{
+    display: block;
+    width: 150px;
+    border-bottom: 5px solid red;
+    margin-bottom: 10px;
+    
+}
+
+input[type=checkbox]{
+    display: inline-block
+}
+
+
+.subject {
+    
+}
+
+ #checkboxBio{
+    visibility: hidden;
+}
+
+#checkboxPhysical{
+    visibility: hidden;
+}
+
+#checkboxSor{
+    visibility: hidden;
+}
+
+#checkboxCm{
+    visibility: hidden;
+}
