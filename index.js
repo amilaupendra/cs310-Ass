@@ -7,6 +7,7 @@ const address = document.getElementById("address");
 const telephone = document.getElementById("telephone");
 const zscore = document.getElementById("zscore");
 const small1 = document.getElementById("small1");
+const submitButton = document.getElementById("submitButton");
 
 const course = document.getElementById("course");
 const checkboxBio = document.getElementById("checkboxBio");
@@ -21,6 +22,26 @@ form.addEventListener("submit", (e) => {
   validateForm();
 });
 
+function enableButton() {
+  const submitButton = document.getElementById("submitButton");
+  if (
+    fullName.value != "" &&
+    gender.value != "none" &&
+    birthday.value != "" &&
+    nic.value != "" &&
+    address.value != "" &&
+    telephone.value != "" &&
+    zscore.value != "" &&
+    course.value != "select subject"
+  ) {
+    submitButton.removeAttribute("disabled");
+  } else {
+    submitButton.setAttribute("disabled");
+  }
+}
+course.addEventListener("change", enableButton);
+
+//function to validate whether inputs empty or not
 function validateForm() {
   setError(fullName);
   checkTextOnly(fullName);
@@ -39,10 +60,9 @@ function validateForm() {
 
   setError(zscore);
   checkNumbersOnly(zscore);
-
 }
 
-//function to check wheather the input field empty or not
+//function to check whether the input field empty or not
 function setError(input) {
   if (input.value == "") {
     input.style.borderColor = "red";
@@ -52,7 +72,7 @@ function setError(input) {
   }
 }
 
-//function to check wheather the input filed has numbers or not
+//function to check whether the input filed has numbers or not
 function checkTextOnly(input) {
   const word = input.value;
 
@@ -74,7 +94,7 @@ function checkNumbersOnly(input) {
   }
 }
 
-//function to check tp number 10 digits
+//function to check telephone number 10 digits
 function checkTenNumbers(input) {
   const number = input.value;
 
@@ -95,40 +115,31 @@ function checkTenNumbers(input) {
 function courseRegistration(input) {
   switch (input.value) {
     case "Biological Science":
-      checkboxBio.style.display='block';
-      checkboxPhysical.style.display='none';
-      checkboxSor.style.display='none';
-      checkboxCm.style.display='none';
+      checkboxBio.style.display = "block";
+      checkboxPhysical.style.display = "none";
+      checkboxSor.style.display = "none";
+      checkboxCm.style.display = "none";
       break;
 
     case "Physical science":
-      //checkboxBio.innerHTML = checkboxPhysical.innerHTML;
-      //checkboxBio.style.visibility = "visible";s
-      checkboxPhysical.style.display='block';
-      checkboxSor.style.display='none';
-      checkboxCm.style.display='none';
-      checkboxBio.style.display='none';
+      checkboxPhysical.style.display = "block";
+      checkboxSor.style.display = "none";
+      checkboxCm.style.display = "none";
+      checkboxBio.style.display = "none";
       break;
 
     case "SOR":
-      //checkboxBio.innerHTML = checkboxSor.innerHTML;
-      //checkboxBio.style.visibility = "visible";
-      checkboxSor.style.display='block';
-      checkboxCm.style.display='none';
-      checkboxBio.style.display='none';
-      checkboxPhysical.style.display='none';
-
-
+      checkboxSor.style.display = "block";
+      checkboxCm.style.display = "none";
+      checkboxBio.style.display = "none";
+      checkboxPhysical.style.display = "none";
       break;
 
     case "CM":
-      //checkboxBio.innerHTML = checkboxCm.innerHTML;
-      //checkboxBio.style.visibility = "visible";
-      checkboxCm.style.display='block';
-      checkboxBio.style.display='none';
-      checkboxPhysical.style.display='none';
-      checkboxSor.style.display='none';
-
+      checkboxCm.style.display = "block";
+      checkboxBio.style.display = "none";
+      checkboxPhysical.style.display = "none";
+      checkboxSor.style.display = "none";
       break;
 
     default:
@@ -136,30 +147,15 @@ function courseRegistration(input) {
   }
 }
 
-
+//limit checkbox click
 var checks = document.querySelectorAll(".check");
-var limit=5;
-for (var i=0;i <checks.length; i++){
-   checks[i].onclick=selectiveCheck;
-   function selectiveCheck(event){
-      var checkedChecks=document.querySelectorAll('.check:checked');
-      if(checkedChecks.length>=limit+1){
-         return false;
-      }
-   }
-}
-
-//limit checkbox selection
-
-/*var checks = document.querySelectorAll(".check");
-var max = 2;
+var limit = 5;
 for (var i = 0; i < checks.length; i++) {
   checks[i].onclick = selectiveCheck;
-
   function selectiveCheck(event) {
     var checkedChecks = document.querySelectorAll(".check:checked");
-    if (checkedChecks.length >= max + 1) {
+    if (checkedChecks.length >= limit + 1) {
       return false;
     }
   }
-}*/
+}

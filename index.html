@@ -12,7 +12,8 @@
 
     <link rel="stylesheet" href="index.css" />
 
-    <title>FormValidation</title>
+    <title>Student Registration</title>
+    <link rel="icon" type="image/x-icon" href="/crest.webp">
   </head>
 
   <body>
@@ -22,7 +23,7 @@
       <h5 style="text-align: center">Faculty of Science</h5>
 
       <form id="form" method="post">
-        <h4>Personal information</h4>
+        <h4 style="font-size: 25px;">Personal information</h4>
         <hr />
 
         <div class="form-control">
@@ -35,6 +36,7 @@
         <div class="form-control ">
           <label class="labels">Gender</label>
           <select class="inputs" id="gender" name="gender">
+            <option value="none" >none</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Other">Other</option>
@@ -56,7 +58,7 @@
         </div>
 
         <div class="form-control">
-          <label class="labels"">Address</label>
+          <label class="labels">Address</label>
           <textarea 
             rows="2"
             class="inputs"
@@ -85,7 +87,7 @@
         </div>
         <br />
 
-        <h4>Course information</h4>
+        <h4 style="font-size: 25px;">Course information</h4>
         <hr />
 
         <div class="form-control CourseDiv">
@@ -165,7 +167,7 @@
 
         <br><br>
 
-        <input type="submit" value="enter">
+        <input id="submitButton" disabled type="submit" value="enter">
       </form>
     </div>
 
