@@ -13,17 +13,25 @@
     <link rel="stylesheet" href="index.css" />
 
     <title>Student Registration</title>
-    <link rel="icon" type="image/x-icon" href="/crest.webp">
+    <link rel="icon" type="image/x-icon" href="/crest.webp" />
   </head>
 
   <body>
     <div class="main-div">
-
-      <h1 style="text-align: center">Student Registration</h1>
-      <h5 style="text-align: center">Faculty of Science</h5>
+      <div class="header" style="display: flex;">
+        <img
+          style="float: left; width: 100px; height: 100px; display: block"
+          src="crest.webp"
+          alt=""
+        />
+        <div class="topic" style="display: block; margin: auto;">
+          <h1 style="text-align: center">Student Registration</h1>
+          <h4 style="text-align: center">Faculty of Science</h4>
+        </div>
+      </div>
 
       <form id="form" method="post">
-        <h4 style="font-size: 25px;">Personal information</h4>
+        <h4 style="font-size: 20px">Personal information</h4>
         <hr />
 
         <div class="form-control">
@@ -33,10 +41,10 @@
           <small id="small1">Error messege</small>
         </div>
 
-        <div class="form-control ">
+        <div class="form-control">
           <label class="labels">Gender</label>
           <select class="inputs" id="gender" name="gender">
-            <option value="none" >none</option>
+            <option value="none">none</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Other">Other</option>
@@ -59,7 +67,7 @@
 
         <div class="form-control">
           <label class="labels">Address</label>
-          <textarea 
+          <textarea
             rows="2"
             class="inputs"
             cols="10"
@@ -81,18 +89,29 @@
 
         <div class="form-control">
           <label class="labels">Z Score</label>
-          <input type="number" class="inputs" step="any" id="zscore" name="zscore" />
+          <input
+            type="number"
+            class="inputs"
+            step="any"
+            id="zscore"
+            name="zscore"
+          />
           <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
           <small>Error messege</small>
         </div>
         <br />
 
-        <h4 style="font-size: 25px;">Course information</h4>
+        <h4 style="font-size: 20px">Course information</h4>
         <hr />
 
         <div class="form-control CourseDiv">
           <label class="labels">Select Course</label>
-          <select class="inputs" id="course" name="course" onchange="courseRegistration(this)" >
+          <select
+            class="inputs"
+            id="course"
+            name="course"
+            onchange="courseRegistration(this)"
+          >
             <option value="Select Subject">Select Subject</option>
             <option value="Biological Science">Biological Science</option>
             <option value="Physical science">Physical science</option>
@@ -103,71 +122,215 @@
 
         <div class="subjectsDiv" class="checkboxBio" id="checkboxBio">
           <label class="labels" id="subjectId">Subject</label>
-          <input  type="checkbox" class="check" id="bioSub1" name="bioSub1" value="BL305" />
+          <input
+            type="checkbox"
+            class="check"
+            id="bioSub1"
+            name="bioSub1"
+            value="BL305"
+          />
           <label for="bioSub1">BL305</label>
-          <input  type="checkbox" class="check" id="bioSub2" name="bioSub2" value="BL306" />
+          <input
+            type="checkbox"
+            class="check"
+            id="bioSub2"
+            name="bioSub2"
+            value="BL306"
+          />
           <label for="bioSub2">BL306</label>
-          <input  type="checkbox" class="check" id="bioSub3" name="bioSub3" value="BL307" />
+          <input
+            type="checkbox"
+            class="check"
+            id="bioSub3"
+            name="bioSub3"
+            value="BL307"
+          />
           <label for="bioSub3">BL307</label>
-          <input  type="checkbox" class="check" id="bioSub4" name="bioSub4" value="BL308" />
+          <input
+            type="checkbox"
+            class="check"
+            id="bioSub4"
+            name="bioSub4"
+            value="BL308"
+          />
           <label for="bioSub4">BL308</label>
-          <input  type="checkbox" class="check" id="bioSub5" name="bioSub5" value="BL309" />
+          <input
+            type="checkbox"
+            class="check"
+            id="bioSub5"
+            name="bioSub5"
+            value="BL309"
+          />
           <label for="bioSub1">BL309</label>
-          <input  type="checkbox" class="check" id="bioSub6" name="bioSub6" value="BL310" />
+          <input
+            type="checkbox"
+            class="check"
+            id="bioSub6"
+            name="bioSub6"
+            value="BL310"
+          />
           <label for="bioSub6">BL310</label>
         </div>
 
         <div class="subjectsDiv" class="checkboxPhysical" id="checkboxPhysical">
           <label class="labels" id="subjectId">Subject</label>
-          <input  type="checkbox" class="check" id="phySub1" name="phySub1" value="PH305" />
+          <input
+            type="checkbox"
+            class="check"
+            id="phySub1"
+            name="phySub1"
+            value="PH305"
+          />
           <label for="phySub1">PH305</label>
-          <input  type="checkbox" class="check" id="phySub2" name="phySub2" value="PH306" />
+          <input
+            type="checkbox"
+            class="check"
+            id="phySub2"
+            name="phySub2"
+            value="PH306"
+          />
           <label for="phySub2">PH306</label>
-          <input  type="checkbox" class="check" id="phySub3" name="phySub3" value="PH307" />
+          <input
+            type="checkbox"
+            class="check"
+            id="phySub3"
+            name="phySub3"
+            value="PH307"
+          />
           <label for="phySub3">PH307</label>
-          <input  type="checkbox" class="check" id="phySub4" name="phySub4" value="PH308" />
+          <input
+            type="checkbox"
+            class="check"
+            id="phySub4"
+            name="phySub4"
+            value="PH308"
+          />
           <label for="phySub4">PH308</label>
-          <input  type="checkbox" class="check" id="phySub5" name="phySub5" value="PH309" />
+          <input
+            type="checkbox"
+            class="check"
+            id="phySub5"
+            name="phySub5"
+            value="PH309"
+          />
           <label for="phySub1">PH309</label>
-          <input  type="checkbox" class="check" id="phySub6" name="phySub6" value="PH310" />
+          <input
+            type="checkbox"
+            class="check"
+            id="phySub6"
+            name="phySub6"
+            value="PH310"
+          />
           <label for="phySub6">PH310</label>
         </div>
 
         <div class="subjectsDiv" class="checkboxSor" id="checkboxSor">
           <label class="labels" id="subjectId">Subject</label>
-          <input  type="checkbox" class="check" id="sorSub1" name="sorSub1" value="ST305" />
+          <input
+            type="checkbox"
+            class="check"
+            id="sorSub1"
+            name="sorSub1"
+            value="ST305"
+          />
           <label for="sorSub1">ST305</label>
-          <input  type="checkbox" class="check" id="sorSub2" name="sorSub2" value="ST306" />
+          <input
+            type="checkbox"
+            class="check"
+            id="sorSub2"
+            name="sorSub2"
+            value="ST306"
+          />
           <label for="sorSub2">ST306</label>
-          <input  type="checkbox" class="check" id="sorSub3" name="sorSub3" value="ST307" />
+          <input
+            type="checkbox"
+            class="check"
+            id="sorSub3"
+            name="sorSub3"
+            value="ST307"
+          />
           <label for="sorSub3">ST307</label>
-          <input  type="checkbox" class="check" id="sorSub4" name="sorSub4" value="ST308" />
+          <input
+            type="checkbox"
+            class="check"
+            id="sorSub4"
+            name="sorSub4"
+            value="ST308"
+          />
           <label for="sorSub4">ST308</label>
-          <input  type="checkbox" class="check" id="sorSub5" name="sorSub5" value="ST309" />
+          <input
+            type="checkbox"
+            class="check"
+            id="sorSub5"
+            name="sorSub5"
+            value="ST309"
+          />
           <label for="sorSub1">ST309</label>
-          <input  type="checkbox" class="check" id="sorSub6" name="sorSub6" value="ST310" />
+          <input
+            type="checkbox"
+            class="check"
+            id="sorSub6"
+            name="sorSub6"
+            value="ST310"
+          />
           <label for="sorSub6">ST310</label>
         </div>
 
         <div class="subjectsDiv" class="checkboxCm" id="checkboxCm">
           <label class="labels" id="subjectId">Subject</label>
-          <input  type="checkbox" class="check" id="cmSub1" name="cmSub1" value="MT305" />
+          <input
+            type="checkbox"
+            class="check"
+            id="cmSub1"
+            name="cmSub1"
+            value="MT305"
+          />
           <label for="cmSub1">MT305</label>
-          <input  type="checkbox" class="check" id="cmSub2" name="cmSub2" value="MT306" />
+          <input
+            type="checkbox"
+            class="check"
+            id="cmSub2"
+            name="cmSub2"
+            value="MT306"
+          />
           <label for="cmSub2">MT306</label>
-          <input  type="checkbox" class="check" id="cmSub3" name="cmSub3" value="MT307" />
+          <input
+            type="checkbox"
+            class="check"
+            id="cmSub3"
+            name="cmSub3"
+            value="MT307"
+          />
           <label for="cmSub3">MT307</label>
-          <input  type="checkbox" class="check" id="cmSub4" name="cmSub4" value="MT308" />
+          <input
+            type="checkbox"
+            class="check"
+            id="cmSub4"
+            name="cmSub4"
+            value="MT308"
+          />
           <label for="cmSub4">MT308</label>
-          <input  type="checkbox" class="check" id="cmSub5" name="cmSub5" value="MT309" />
+          <input
+            type="checkbox"
+            class="check"
+            id="cmSub5"
+            name="cmSub5"
+            value="MT309"
+          />
           <label for="cmSub1">MT309</label>
-          <input  type="checkbox" class="check" id="cmSub6" name="cmSub6" value="MT310" />
+          <input
+            type="checkbox"
+            class="check"
+            id="cmSub6"
+            name="cmSub6"
+            value="MT310"
+          />
           <label for="cmSub6">MT310</label>
         </div>
 
-        <br><br>
+        <br /><br />
 
-        <input id="submitButton" disabled type="submit" value="enter">
+        <input id="submitButton" disabled type="submit" value="enter" />
       </form>
     </div>
 
