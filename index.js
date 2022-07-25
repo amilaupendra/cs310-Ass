@@ -38,7 +38,7 @@ function enableButton() {
     address.value != "" &&
     telephone.value != "" &&
     zscore.value != "" &&
-    course.value != "select subject"
+    course.value != "Select Subject"
   ) {
     submitButton.removeAttribute("disabled");
   } else {
@@ -128,6 +128,7 @@ function checkTenNumbers(input) {
     count = count + 1;
   } else {
     input.style.borderColor = "green";
+    small.style.visibility = "hidden";
   }
 }
 
