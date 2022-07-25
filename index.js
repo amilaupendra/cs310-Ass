@@ -16,6 +16,7 @@ const checkboxPhysical = document.getElementById("checkboxPhysical");
 const checkboxSor = document.getElementById("checkboxSor");
 const checkboxCm = document.getElementById("checkboxCm");
 
+
 form.addEventListener("submit", (e) => {
   e.preventDefault(e);
 
@@ -68,6 +69,8 @@ function validateForm() {
 
   setError(zscore);
   checkNumbersOnly(zscore);
+
+  setError(course);
 }
 
 //function to check whether the input field empty or not
@@ -80,7 +83,7 @@ function setError(input) {
   }
 }
 
-//function to check whether the input filed has numbers or not
+//function to check whether the input field has numbers or not
 function checkTextOnly(input) {
   const word = input.value;
 
@@ -166,4 +169,10 @@ for (var i = 0; i < checks.length; i++) {
       return false;
     }
   }
+}
+
+//Thanking Alert
+
+function thankAlert(){
+  alert("Successfully Registered..")
 }

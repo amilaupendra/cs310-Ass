@@ -36,7 +36,7 @@
 
         <div class="form-control">
           <label class="labels">Name with Initials</label>
-          <input type="text" id="name" class="inputs" />
+          <input type="text" id="name" class="inputs" placeholder="W.John Smith"/>
           <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
           <small id="small1">Error messege</small>
         </div>
@@ -60,29 +60,21 @@
 
         <div class="form-control">
           <label class="labels">NIC</label>
-          <input type="text" class="inputs" id="nic" name="nic" />
+          <input type="text" class="inputs" id="nic" name="nic" placeholder="982451535v"/>
           <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
           <small>Error messege</small>
         </div>
 
         <div class="form-control">
           <label class="labels">Address</label>
-          <textarea
-            rows="2"
-            class="inputs"
-            cols="10"
-            id="address"
-            name="address"
-            style="text-align: left !important"
-          >
-          </textarea>
+          <textarea rows="2" class="inputs" cols="10" id="address" name="address" placeholder="653/1, st.thomas street, Negombo"></textarea>
           <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
           <small>Error messege</small>
         </div>
 
         <div class="form-control">
           <label class="labels">Telephone No:</label>
-          <input type="number" class="inputs" id="telephone" name="telephone" />
+          <input type="number" class="inputs" id="telephone" name="telephone" placeholder="0761256458" />
           <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
           <small>Error messege</small>
         </div>
@@ -95,6 +87,7 @@
             step="any"
             id="zscore"
             name="zscore"
+            placeholder="3.5"
           />
           <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
           <small>Error messege</small>
@@ -112,7 +105,7 @@
             name="course"
             onchange="courseRegistration(this)"
           >
-            <option value="Select Subject">Select Subject</option>
+            <option value="Select Subject"></option>
             <option value="Biological Science">Biological Science</option>
             <option value="Physical science">Physical science</option>
             <option value="SOR">SOR</option>
