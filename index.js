@@ -16,11 +16,16 @@ const checkboxPhysical = document.getElementById("checkboxPhysical");
 const checkboxSor = document.getElementById("checkboxSor");
 const checkboxCm = document.getElementById("checkboxCm");
 
+const count = 0;
 
 form.addEventListener("submit", (e) => {
   e.preventDefault(e);
 
   validateForm();
+
+  if(count == 0){
+   thankAlert();
+  }
 });
 
 function enableButton() {
@@ -78,6 +83,8 @@ function setError(input) {
   if (input.value == "") {
     input.style.borderColor = "red";
     input.style.backgroundColor = "red";
+    count = count + 1;
+    alert(count);
   } else {
     input.style.borderColor = "green";
   }
@@ -91,6 +98,7 @@ function checkTextOnly(input) {
 
   if (!word.match(letter)) {
     input.style.borderColor = "red";
+    count = count + 1;
   }
 }
 
@@ -102,6 +110,7 @@ function checkNumbersOnly(input) {
 
   if (!word.match(numbers)) {
     input.style.borderColor = "red";
+    count = count + 1;
   }
 }
 
@@ -116,6 +125,7 @@ function checkTenNumbers(input) {
     input.style.borderColor = "red";
     small.innerText = "enter a valid number";
     small.style.visibility = "visible";
+    count = count + 1;
   } else {
     input.style.borderColor = "green";
   }
@@ -174,5 +184,5 @@ for (var i = 0; i < checks.length; i++) {
 //Thanking Alert
 
 function thankAlert(){
-  alert("Successfully Registered..")
+  alert("Successfully Registered..");
 }
