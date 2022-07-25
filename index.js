@@ -10,7 +10,7 @@ const small1 = document.getElementById("small1");
 
 const course = document.getElementById("course");
 const checkboxBio = document.getElementById("checkboxBio");
-  const checkboxBio2 = checkboxBio;
+const checkboxBio2 = checkboxBio;
 const checkboxPhysical = document.getElementById("checkboxPhysical");
 const checkboxSor = document.getElementById("checkboxSor");
 const checkboxCm = document.getElementById("checkboxCm");
@@ -39,7 +39,6 @@ function validateForm() {
 
   setError(zscore);
   checkNumbersOnly(zscore);
-
 
 }
 
@@ -80,45 +79,87 @@ function checkTenNumbers(input) {
   const number = input.value;
 
   const formControl = input.parentElement;
-  const small = formControl.querySelector('small');
+  const small = formControl.querySelector("small");
 
   if (number.length > 10 || number.length < 10) {
     input.style.borderColor = "red";
-    small.innerText= 'enter a valid number';
-    small.style.visibility = 'visible';
+    small.innerText = "enter a valid number";
+    small.style.visibility = "visible";
   } else {
     input.style.borderColor = "green";
   }
 }
 
-
 //course and subects
 
-function courseRegistration(input){
+function courseRegistration(input) {
+  switch (input.value) {
+    case "Biological Science":
+      checkboxBio.style.display='block';
+      checkboxPhysical.style.display='none';
+      checkboxSor.style.display='none';
+      checkboxCm.style.display='none';
+      break;
 
-  
+    case "Physical science":
+      //checkboxBio.innerHTML = checkboxPhysical.innerHTML;
+      //checkboxBio.style.visibility = "visible";s
+      checkboxPhysical.style.display='block';
+      checkboxSor.style.display='none';
+      checkboxCm.style.display='none';
+      checkboxBio.style.display='none';
+      break;
 
-  switch(input.value){
+    case "SOR":
+      //checkboxBio.innerHTML = checkboxSor.innerHTML;
+      //checkboxBio.style.visibility = "visible";
+      checkboxSor.style.display='block';
+      checkboxCm.style.display='none';
+      checkboxBio.style.display='none';
+      checkboxPhysical.style.display='none';
 
-    case "Biological Science" : 
-    checkboxBio.style.visibility='visible';
-    break;
 
-    case "Physical science" :
-    checkboxBio.innerHTML = checkboxPhysical.innerHTML;
-    checkboxBio.style.visibility='visible';
-    break;
+      break;
 
-    case "SOR" : 
-    checkboxBio.innerHTML = checkboxSor.innerHTML;
-    checkboxBio.style.visibility='visible';
-    break;
+    case "CM":
+      //checkboxBio.innerHTML = checkboxCm.innerHTML;
+      //checkboxBio.style.visibility = "visible";
+      checkboxCm.style.display='block';
+      checkboxBio.style.display='none';
+      checkboxPhysical.style.display='none';
+      checkboxSor.style.display='none';
 
-    case "CM" : 
-    checkboxBio.innerHTML = checkboxCm.innerHTML;
-    checkboxBio.style.visibility='visible';
-    break;
+      break;
 
-    default: break;
+    default:
+      break;
   }
 }
+
+
+var checks = document.querySelectorAll(".check");
+var limit=5;
+for (var i=0;i <checks.length; i++){
+   checks[i].onclick=selectiveCheck;
+   function selectiveCheck(event){
+      var checkedChecks=document.querySelectorAll('.check:checked');
+      if(checkedChecks.length>=limit+1){
+         return false;
+      }
+   }
+}
+
+//limit checkbox selection
+
+/*var checks = document.querySelectorAll(".check");
+var max = 2;
+for (var i = 0; i < checks.length; i++) {
+  checks[i].onclick = selectiveCheck;
+
+  function selectiveCheck(event) {
+    var checkedChecks = document.querySelectorAll(".check:checked");
+    if (checkedChecks.length >= max + 1) {
+      return false;
+    }
+  }
+}*/

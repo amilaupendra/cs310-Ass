@@ -70,27 +70,23 @@ input[type=submit]:hover{
     
 }
 
+
 input[type=checkbox]{
     display: inline-block
 }
 
-
-.subject {
-    
-}
-
  #checkboxBio{
-    visibility: hidden;
+    display: none;
 }
 
 #checkboxPhysical{
-    visibility: hidden;
+    display: none;
 }
 
 #checkboxSor{
-    visibility: hidden;
+    display: none;
 }
 
 #checkboxCm{
-    visibility: hidden;
+    display: none;
 }
