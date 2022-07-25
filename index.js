@@ -39,6 +39,14 @@ function enableButton() {
     submitButton.setAttribute("disabled");
   }
 }
+
+fullName.addEventListener("change", enableButton);
+gender.addEventListener("change", enableButton);
+birthday.addEventListener("change", enableButton);
+nic.addEventListener("change", enableButton);
+address.addEventListener("change", enableButton);
+telephone.addEventListener("change", enableButton);
+zscore.addEventListener("change", enableButton);
 course.addEventListener("change", enableButton);
 
 //function to validate whether inputs empty or not
